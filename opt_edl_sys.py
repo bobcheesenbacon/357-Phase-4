@@ -187,12 +187,10 @@ edl_system['team_name'] = '5 Guys'  # change this to something fun for your team
 edl_system['team_number'] = 5    # change this to your assigned team number (also change it below when saving your pickle file)
 
 # This will create a file that you can submit as your competition file.
-pickle_path = os.path.join("C:\Users\barry\Documents\MEEN 357\Project 2\opt_edl_sys.py", 'FA24_504team5.pickle' )
-
-with open(pickle_path, 'wb') as handle:
+with open('FA24_504team5.pickle', 'wb') as handle:
     pickle.dump(edl_system, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-print("Pickle file saved at:", os.path.abspath(pickle_path))
+print("Pickle file saved at:", os.path.join(os.getcwd(), 'FA24_504team5.pickle') )
 # *****************************************************************************
 
 #del edl_system
